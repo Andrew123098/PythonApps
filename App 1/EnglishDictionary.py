@@ -9,13 +9,17 @@ data = json.load(open("data.json"))  #Open .json file using library
 # Value Finder Function:                               #
 # This function takes in a word given my the user and  #
 # either returns that the word does not exist, returns #
-# the definition(s) of the word in a list, or, finds   #
-# the most similar word and asks if you meant to type  #
-# that word.                                           #
+# the definition(s) of the word (including pronouns    #
+# and acronyms) in a list or, finds the most similar   #
+# word and asks you if you meant to type that word.    # 
 ########################################################
 def valueFinder(keyValue):
     if keyValue in data:
         return data[keyValue]
+    elif keyValue.title() in data:
+        return data[keyValue.title()]
+    elif keyValue.upper() in data:
+        return data[keyValue.upper()]
     elif len(get_close_matches(keyValue, data.keys())) > 0:
         print(f"Did you mean {get_close_matches(keyValue, data.keys())[0]} instead? ")
         yes_no = input(" Please enter Y/N: ").lower()
