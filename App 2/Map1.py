@@ -1,3 +1,9 @@
+### This App uses the folium library to create an interactive map that displays
+### the entire world's countries, highlights them based on population, and 
+### displayes color coded markers with elevation info for all north american
+### volcanoes. Also, the layers have an ON/OFF button.
+
+# Import necessary libraries
 import folium
 import pandas
 
