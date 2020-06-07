@@ -30,6 +30,17 @@ def search_command():
 
 def add_command():
     backend.insert(title_text.get(), artist_text.get(), album_text.get(), year_text.get())
+    list1.delete(0,END)
+    list1.insert(END,(title_text.get(), artist_text.get(), album_text.get(), year_text.get()))
+
+def update_command():
+    
+
+def delete_command():
+    backend.delete(title_text.get(), artist_text.get(), album_text.get(), year_text.get())
+    list1.delete(0,END)
+    list1.insert(title_text.get(), artist_text.get(), album_text.get(), year_text.get())
+
 
 
 
