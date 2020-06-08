@@ -10,6 +10,8 @@
 # Update an entry
 # Delete an entry
 # Clear all entries
+#
+# NOTE: To create a .exe file, use the termial command 'pyinstaller --onefile --windowed frontend.py'
 
 ###############
 ## FRONT END ##
