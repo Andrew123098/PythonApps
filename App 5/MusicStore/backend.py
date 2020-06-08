@@ -2,8 +2,8 @@ import sqlite3
 
 def connect():
     conn=sqlite3.connect("music.db")
-    cur=conncursor()
-    cur.execute("CREATE TABLE IF NOT EXISTS music (id INTEGER PRIMARY KEY, title text, artist text, album text, year integer")
+    cur=conn.cursor()
+    cur.execute("CREATE TABLE IF NOT EXISTS music (id INTEGER PRIMARY KEY, title text, artist text, album text, year integer)")
     conn.commit()
     conn.close()
 
